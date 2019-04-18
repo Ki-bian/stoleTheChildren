@@ -1,0 +1,11 @@
+#PlayButton {
+    width: 50%;
+    margin-top: 15%;
+    display: inline-block;
+    text-align: center;
+
+}
+.containerButton {
+    display:flex;
+    justify-content: center;
+}

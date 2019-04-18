@@ -1,11 +1,23 @@
 import React, { Component } from 'react';
 import './App.css';
-import Game from './Game.js'
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import Home from './composants/Home'
+import Game from './Game'
 
 class App extends Component {
   render() {
     return (
-      <div><Game /></div>
+      <div className="App">
+        <header className="App-header">
+          <BrowserRouter>
+            <Switch>
+              <Route exact path="/" component={Home} />
+              <Route path="/game" component={Game} />
+              {/*<Route path="/scores" component={Duo} /> */}
+            </Switch>
+          </BrowserRouter>
+        </header>
+      </div>
     );
   }
 }
