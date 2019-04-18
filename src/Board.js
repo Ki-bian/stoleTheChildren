@@ -39,6 +39,9 @@ class Board extends Component {
     const { pointer } = this.state;
     const newPointer = pointer === length - 1 ? 0 : pointer + 1;
     this.setState({ pointer: newPointer });
+    setTimeout(() => {
+        this.setState({ pointer : 0 });
+  }, 800);
   }
 
   handleClick2() {
@@ -46,6 +49,9 @@ class Board extends Component {
     const { pointer2 } = this.state;
     const newPointer = pointer2 === length - 1 ? 0 : pointer2 + 1;
     this.setState({ pointer2: newPointer });
+    setTimeout(() => {
+      this.setState({ pointer2 : 0 });
+}, 800);
   }
 
   handleClick3() {
@@ -53,6 +59,9 @@ class Board extends Component {
     const { pointer3 } = this.state;
     const newPointer = pointer3 === length - 1 ? 0 : pointer3 + 1;
     this.setState({ pointer3: newPointer });
+    setTimeout(() => {
+      this.setState({ pointer3 : 0 });
+}, 800);
   }
   getScore = (newScore, id) => {
     if (id === "egg1") {
@@ -60,18 +69,27 @@ class Board extends Component {
         score: this.state.score + newScore,
         pointer: 1,
       });
+      setTimeout(() => {
+        this.setState({ pointer : 0 });
+  }, 800);
     }
     if (id === "egg2") {
       this.setState({
         score: this.state.score + newScore,
         pointer2: 1,
       });
+      setTimeout(() => {
+        this.setState({ pointer2 : 0 });
+  }, 800);
     }
     if (id === "egg3") {
       this.setState({
         score: this.state.score + newScore,
         pointer3: 1,
       });
+      setTimeout(() => {
+        this.setState({ pointer3 : 0 });
+  }, 800);
     }
   }
 
@@ -79,8 +97,6 @@ class Board extends Component {
     const { pointer, pointer2, pointer3, imgs, imgs2, imgs3 } = this.state;
 
     return (
-      <div className="board">
-        <Score newScore={this.state.score} />
         <div className="board">
                 <Score newScore={this.state.score} />
                 <div className="bebe">
@@ -96,7 +112,6 @@ class Board extends Component {
                     <Egg id="egg3" score={this.getScore} />
                 </div>
             </div>
-      </div>
     );
   }
 

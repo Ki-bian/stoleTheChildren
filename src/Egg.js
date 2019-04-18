@@ -18,6 +18,17 @@ class Egg extends Component {
                 this.setState({ egg, });
             })
     }
+    componentDidMount() {
+        setInterval(() => {
+            axios.get(`http://easteregg.wildcodeschool.fr/api/eggs/random`)
+                .then(res => {
+                    const egg = res.data;
+                    this.setState({ egg, });
+                })
+        }, 6009);
+
+    }
+
 
     render() {
         let eggscore;
@@ -58,7 +69,7 @@ class Egg extends Component {
             default:
                 break;
         }
-        
+
         return (
             <div className="eggImage" onClick={() => this.props.score(eggscore, this.props.id)} >
                 <img src={image} alt={this.state.egg.name} className={this.state.rarity} />
