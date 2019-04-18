@@ -35,8 +35,9 @@ class EggsValue extends Component {
         axios.get(`http://easteregg.wildcodeschool.fr/api/eggs`)
             .then(res => {
                 const eggs = res.data;
-                this.setState({ eggs, });
+                this.setState({ eggs, }, this.assignValues);
             })
+            
             
         }
     assignValues = () => {
@@ -46,14 +47,14 @@ class EggsValue extends Component {
             eggBasic = egg.filter(object => { return object.rarity === "basic" });
             eggRare = egg.filter(object => { return object.rarity === "rare" });
             eggLegendary = egg.filter(object => { return object.rarity === "legendary" });
-            console.log(eggBasic)
+            console.log(JSON.stringify(eggBasic))
         }
 
     }
 
     render() {
         
-        this.assignValues()
+        console.log(eggBasic)
 
         return (
             <div className="eggsValue">
