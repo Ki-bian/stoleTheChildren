@@ -15,6 +15,7 @@ class Board extends Component {
             pointer: 0,
             pointer2: 0,
             pointer3: 0,
+            pointer4: 0,
             imgs: [
               bebe,
               bebe2,
@@ -26,12 +27,17 @@ class Board extends Component {
             imgs3: [
             bebe,
             bebe2,
-            ]
+            ],
+            imgs4: [
+                bebe,
+                bebe2,
+                ]
           };
       
           this.handleClick = this.handleClick.bind(this);
           this.handleClick2 = this.handleClick2.bind(this);
           this.handleClick3 = this.handleClick3.bind(this);
+          this.handleClick4 = this.handleClick4.bind(this);
         }
       
         handleClick() {
@@ -54,21 +60,39 @@ class Board extends Component {
             const newPointer =  pointer3 === length - 1 ? 0 : pointer3 + 1;
             this.setState({ pointer3: newPointer });
         }
+
+        handleClick4() {
+            const { length } = this.state.imgs4;
+            const { pointer4 } = this.state;
+            const newPointer =  pointer4 === length - 1 ? 0 : pointer4 + 1;
+            this.setState({ pointer4: newPointer });
+        }
         getScore = (newScore) => {
             this.setState({ score: this.state.score + newScore });
         }
 
         render() {
-            const { pointer, pointer2, pointer3, imgs, imgs2, imgs3 } = this.state;
+            const { pointer, pointer2, pointer3, pointer4, imgs, imgs2, imgs3, imgs4 } = this.state;
 
           return (
             <div className="board">
-                <img className="bebe" src={imgs[pointer]} onClick={this.handleClick} alt="bebe"/>
-                <img className="bebe2" src={imgs2[pointer2]} onClick={this.handleClick2} alt="bebe2"/>
-                <img className="bebe3" src={imgs3[pointer3]} onClick={this.handleClick3} alt="bebe3"/>
-                <Egg score={this.getScore} />
-                <Egg score={this.getScore} />
                 <Score newScore={this.state.score} />
+                <div className="bebe">
+                    <img src={imgs[pointer]} onClick={this.handleClick} alt="bebe"/>
+                    <Egg score={this.getScore} />
+                </div>
+                <div className="bebe2">
+                    <img src={imgs2[pointer2]} onClick={this.handleClick2} alt="bebe2"/>
+                    <Egg score={this.getScore} />
+                </div>
+                <div className="bebe3">
+                    <img src={imgs3[pointer3]} onClick={this.handleClick3} alt="bebe3"/>
+                    <Egg score={this.getScore} />
+                </div>
+                <div className="bebe4">
+                    <img src={imgs4[pointer4]} onClick={this.handleClick4} alt="bebe4"/>
+                    <Egg score={this.getScore} />
+                </div>
             </div>
           );
         }
