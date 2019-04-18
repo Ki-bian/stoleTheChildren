@@ -9,7 +9,7 @@ class Game extends Component {
         super(props);
         this.state = {
             score: 0,
-          }
+        }
     }
     componentWillMount() {
         axios.get(`http://easteregg.wildcodeschool.fr/api/eggs/random`)
@@ -19,17 +19,17 @@ class Game extends Component {
             })
     }
     getScore = (newScore) => {
-        this.setState({ score : this.state.score + newScore });
+        this.setState({ score: this.state.score + newScore });
     }
 
-    render() { 
-        return ( 
+    render() {
+        return (
             <div className="game">
-                <Egg score={this.getScore}/>
+                <Egg score={this.getScore} />
                 <Score newScore={this.state.score} />
             </div>
-         );
+        );
     }
 }
- 
+
 export default Game;
