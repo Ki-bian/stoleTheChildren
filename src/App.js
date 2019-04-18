@@ -1,10 +1,15 @@
 import React, { Component } from 'react';
 import './App.css';
+import Modal from './Modal';
 
 class App extends Component {
   render() {
     return (
-      <div></div>
+      <div>
+        <Modal>
+          
+        </Modal>
+      </div>
     );
   }
 }
