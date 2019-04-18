@@ -1,67 +1,69 @@
 import React, { Component } from 'react';
-import axios from 'axios';
+import './EggsValue.css';
 
-let eggJunk = "";
-let eggBasic = "j";
-let eggRare = "";
-let eggLegendary = "";
+const eggTab = [
+    {
+        name: 'Junk',
+        score: 1,
+        image: "./junk.png",
+    },
+    {
+        name: 'Basic',
+        score: 2,
+        image: "./basic.png",
+    },
+    {
+        name: 'Fine',
+        score: 3,
+        image: "./fine.png",
+    },
+    {
+        name: 'Ascended',
+        score: 4,
+        image: "./ascended.png",
+    },
+    {
+        name: 'Exotic',
+        score: 5,
+        image: "./exotic.png",
+    },
+    {
+        name: 'Rare',
+        score: 6,
+        image: "./rare.png",
+    },
+    {
+        name: 'Masterwork',
+        score: 7,
+        image: "./masterwork.png",
+    },
+    {
+        name: 'Legendary',
+        score: 8,
+        image: "./legendary.png",
+    }
+]
 
 class EggsValue extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            eggs: "",
-        }
-        this.basic = {
-            name : "basic",
-            url : "https://banner2.kisspng.com/20180525/lec/kisspng-pokmon-bulbasaur-egg-charmander-drawing-broken-egg-5b07f7302287f2.6863793515272486881415.jpg",
-            points : 1,
-        }
-        this.rare = {
-            name : "rare",
-            url: "http://miam-images.m.i.pic.centerblog.net/o/094d0369.png",
-            points : 2,
-        }
-        this.legendary = {
-            name: "legendary",
-            url: "https://shop.whitehousehistory.org/media/catalog/product/t/r/trump_egg_gold_shop.png",
-            points : 3,
-        }
-        
-
-    }
-
-    componentWillMount() {
-        axios.get(`http://easteregg.wildcodeschool.fr/api/eggs`)
-            .then(res => {
-                const eggs = res.data;
-                this.setState({ eggs, }, this.assignValues);
-            })
-            
-            
-        }
-    assignValues = () => {
-        let egg = this.state.eggs
-        if (egg && egg.length > 0) {
-            eggJunk = egg.filter(object => { return object.rarity === "junk" });
-            eggBasic = egg.filter(object => { return object.rarity === "basic" });
-            eggRare = egg.filter(object => { return object.rarity === "rare" });
-            eggLegendary = egg.filter(object => { return object.rarity === "legendary" });
-            console.log(JSON.stringify(eggBasic))
-        }
-
-    }
 
     render() {
-        
-        console.log(eggBasic)
-
         return (
-            <div className="eggsValue">
+            <div className="alleggs">
 
-            <div> </div>
+                {
+                    eggTab.map((eggitem, index) => (
+                        <div className="eggs">
+                            <h3>{eggitem.name}</h3>
+                            <p>Points : {eggitem.score}</p>
+                            <img src={eggitem.image} alt={eggitem.name} />
+                        </div>
+                    ))
+
+                }
 
             </div>
+
+
         );
     }
 }
