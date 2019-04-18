@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import Egg from './Egg';
-import Score from './Score';
+import EggsValue from './EggsValue';
 
 
 class Game extends Component {
@@ -25,8 +25,8 @@ class Game extends Component {
     render() { 
         return ( 
             <div className="game">
+                <EggsValue />
                 <Egg score={this.getScore}/>
-                <Score newScore={this.state.score} />
                 <div>{this.state.score}</div>
             </div>
          );
