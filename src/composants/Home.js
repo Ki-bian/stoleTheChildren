@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './Home.css';
 import ButtonPlayHome from './ButtonPlayHome';
 import Character from './Character';
+import { NavLink } from 'react-router-dom';
 
 class Home extends Component {
     constructor(props) {
@@ -16,8 +17,10 @@ class Home extends Component {
                         <h1>SteelTheChildren</h1>
                     </div>
                 </div>
-                <ButtonPlayHome />
-                <Character/>
+                <nav>
+                    <NavLink to='./Game'><ButtonPlayHome /></NavLink>
+                </nav>
+                <Character />
             </div>
         );
     }

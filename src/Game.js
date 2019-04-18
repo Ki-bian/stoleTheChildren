@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import Board from './Board';
+import Timer from './composants/Timer';
 
 
 class Game extends Component {
