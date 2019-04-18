@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './Home.css';
 import ButtonPlayHome from './ButtonPlayHome';
+import Character from './Character';
 
 class Home extends Component {
     constructor(props) {
@@ -16,6 +17,7 @@ class Home extends Component {
                     </div>
                 </div>
                 <ButtonPlayHome />
+                <Character/>
             </div>
         );
     }
