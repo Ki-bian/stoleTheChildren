@@ -4,7 +4,6 @@ import './Game.css';
 import bebe from './assets/img/bebe2.gif'
 import bebe2 from './assets/img/bebe touché.gif'
 import Egg from './Egg';
-import EggsValue from './EggsValue';
 import Score from './composants/Score';
 
 class Board extends Component {
