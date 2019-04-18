@@ -80,13 +80,22 @@ class Board extends Component {
 
     return (
       <div className="board">
-        <img className="bebe" src={imgs[pointer]} onClick={this.handleClick} alt="bebe" />
-        <img className="bebe2" src={imgs2[pointer2]} onClick={this.handleClick2} alt="bebe2" />
-        <img className="bebe3" src={imgs3[pointer3]} onClick={this.handleClick3} alt="bebe3" />
-        <Egg id="egg1" score={this.getScore} />
-        <Egg id="egg2" score={this.getScore} />
-        <Egg id="egg3" score={this.getScore} />
         <Score newScore={this.state.score} />
+        <div className="board">
+                <Score newScore={this.state.score} />
+                <div className="bebe">
+                    <img src={imgs[pointer]} onClick={this.handleClick} alt="bebe"/>
+                    <Egg id="egg1" score={this.getScore} />
+                </div>
+                <div className="bebe2">
+                    <img src={imgs2[pointer2]} onClick={this.handleClick2} alt="bebe2"/>
+                    <Egg id="egg2" score={this.getScore} />
+                </div>
+                <div className="bebe3">
+                    <img src={imgs3[pointer3]} onClick={this.handleClick3} alt="bebe3"/>
+                    <Egg id="egg3" score={this.getScore} />
+                </div>
+            </div>
       </div>
     );
   }

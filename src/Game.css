@@ -2,7 +2,7 @@
 {
 	outline: 0;
 	margin: 0;
-	padding: 0;
+    padding: 0;
 }
 
 
@@ -16,32 +16,20 @@ body{
     overflow: hidden;
 }
 
-@keyframes walk
-{
-    0%
-    {
-       	margin: 50vh 0 0 199vh;
-    }
-    100%
-    {
-       margin: 50vh 0 0 -20vw;
-    }
-}
-
 .bebe{
     animation: walk 7s linear infinite;
     position: absolute;
 }
 
-@keyframes walk2
+@keyframes walk
 {
     0%
     {
-       	margin: 80vh 0 0 199vh;
+        margin: 40vh 0 0 199vh;
     }
     100%
     {
-       margin: 80vh 0 0 -20vw;
+       margin: 40vh 0 0 -20vw;
     }
 }
 
@@ -50,11 +38,28 @@ body{
     position: absolute; 
 }
 
+@keyframes walk2
+{
+    0%
+    {
+        margin: 55vh 0 0 199vh;
+    }
+    100%
+    {
+        margin: 55vh 0 0 -20vw;
+    }
+}
+
+.bebe3{
+    animation: walk3 6s linear infinite;   
+    position: absolute; 
+}
+
 @keyframes walk3
 {
     0%
     {
-       	margin: 60vh 0 0 199vh;
+        margin: 60vh 0 0 199vh;
     }
     100%
     {
@@ -62,7 +67,19 @@ body{
     }
 }
 
-.bebe3{
-    animation: walk3 6s linear infinite;   
+.bebe4{
+    animation: walk4 10s ease infinite;   
     position: absolute; 
+}
+
+@keyframes walk4
+{
+    0%
+    {
+        margin: 70vh 0 0 199vh;
+    }
+    100%
+    {
+       margin: 70vh 0 0 -20vw;
+    }
 }
