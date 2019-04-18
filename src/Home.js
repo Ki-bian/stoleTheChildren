@@ -16,14 +16,11 @@ class Home extends Component {
                         <h1>SteelTheChildren</h1>
                     </div>
                 </div>
-                <ButtonPlayHome />
                 <Character/>
+                <ButtonPlayHome />
             </div>
         );
     }
 }
 
 export default Home;
-
-
-
