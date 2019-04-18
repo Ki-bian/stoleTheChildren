@@ -55,7 +55,7 @@ class EggsValue extends Component {
                         <div className="eggs">
                             <h3>{eggitem.name}</h3>
                             <p>Points : {eggitem.score}</p>
-                            <img src={eggitem.image} />
+                            <img src={eggitem.image} alt={eggitem.name} />
                         </div>
                     ))
 

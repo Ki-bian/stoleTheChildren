@@ -53,7 +53,7 @@ class Egg extends Component {
                 break;
             case 'legendary':
                 eggscore = 8;
-                image = "./lengendary.png";
+                image = "./legendary.png";
                 break;
             default:
                 break;
