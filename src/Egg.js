@@ -58,9 +58,9 @@ class Egg extends Component {
             default:
                 break;
         }
-
+        
         return (
-            <div className="eggImage" onClick={() => this.props.score(eggscore)} >
+            <div className="eggImage" onClick={() => this.props.score(eggscore, this.props.id)} >
                 <img src={image} alt={this.state.egg.name} className={this.state.rarity} />
             </div>
         );
