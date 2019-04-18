@@ -9,7 +9,7 @@ class ButtonPlayHome extends Component {
     }
     render() { 
         return (
-            <div class='container'>
+            <div className='containerButton'>
                 <Button id='PlayButton' color="danger" size="lg" block>Play</Button>
             </div>
           );

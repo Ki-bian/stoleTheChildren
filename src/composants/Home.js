@@ -5,18 +5,22 @@ import ButtonPlayHome from './ButtonPlayHome';
 class Home extends Component {
     constructor(props) {
         super(props);
-        this.state = {  }
+        this.state = {}
     }
-    render() { 
+    render() {
         return (
             <div>
-            <h1>SteelTheChildren</h1>
-            <ButtonPlayHome/>
+                <div id='TitleHome'>
+                    <div id='borderTitle'>
+                        <h1>SteelTheChildren</h1>
+                    </div>
+                </div>
+                <ButtonPlayHome />
             </div>
-          );
+        );
     }
 }
- 
+
 export default Home;
 
 

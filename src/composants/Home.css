@@ -1,4 +1,19 @@
 h1 {
     text-align: center;
-    padding-top: 3%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+#borderTitle {
+    border-style: solid;
+    border-color: black;
+    width: 400px;
+    border-radius: 15px;
+    background-color: greenyellow;
+    margin-top: 2%;
+}
+
+#TitleHome {
+    display:flex;
+    justify-content: center;
 }
