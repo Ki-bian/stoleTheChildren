@@ -8,8 +8,8 @@ class Egg extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            egg : "",
-          }
+            egg: "",
+        }
     }
     componentWillMount() {
         axios.get(`http://easteregg.wildcodeschool.fr/api/eggs/random`)
@@ -18,13 +18,44 @@ class Egg extends Component {
                 this.setState({ egg, });
             })
     }
-    render() { 
-        return ( 
-            <div className="eggImage">
-                <img src={this.state.egg.image} alt={this.state.egg.name} className = {this.state.rarity}/>
+
+    render() {
+        let eggscore;
+        switch (this.state.egg.rarity) {
+            case 'junk':
+                eggscore = 1;
+                break;
+            case 'basic':
+                eggscore = 2;
+                break;
+            case 'fine':
+                eggscore = 3;
+                break;
+            case 'ascended':
+                eggscore = 4;
+                break;
+            case 'exotic':
+                eggscore = 5;
+                break;
+            case 'rare':
+                eggscore = 6;
+                break;
+            case 'masterwork':
+                eggscore = 7;
+                break;
+            case 'legendary':
+                eggscore = 8;
+                break;
+            default:
+                break;
+        }
+
+        return (
+            <div className="eggImage" onClick={() => this.props.score(eggscore)} >
+                <img src={this.state.egg.image} alt={this.state.egg.name} className={this.state.rarity} />
             </div>
-         );
+        );
     }
 }
- 
+
 export default Egg;
