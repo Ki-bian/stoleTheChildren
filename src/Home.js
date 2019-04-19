@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './Home.css';
-import ButtonPlayHome from './ButtonPlayHome';
+//import ButtonPlayHome from './ButtonPlayHome';
 import Character from './Character';
 
 class Home extends Component {
@@ -13,11 +13,11 @@ class Home extends Component {
             <div>
                 <div id='TitleHome'>
                     <div id='borderTitle'>
-                        <h1>SteelTheChildren</h1>
+                        <img src="./logo.png"/>
                     </div>
                 </div>
                 <Character/>
-                <ButtonPlayHome />
+                {/*<ButtonPlayHome />*/}
             </div>
         );
     }

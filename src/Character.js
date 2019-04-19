@@ -16,21 +16,21 @@ class Character extends Component {
             </div>
                 <div className='chooseCharac'>
                     <div className='characFeel'>
-                        <h3>  Viscious ?</h3>
+                        <div className="charaname">Viscious ?</div>
                             <nav>
-                                <NavLink to='./game'><img className='imgcharac' src="./burns.png" alt='monty'/></NavLink>
+                                <NavLink to={{ pathname: '/game', state: { char: 'burns'} }}><img className='imgcharac' src="./burns.png" alt='monty'/></NavLink>
                             </nav>
                     </div>
                     <div className='characFeel'>
-                        <h3>  Angry ?</h3>
+                        <div className="charaname">Angry ?</div>
                             <nav>
-                                <NavLink to='./game'><img className='imgcharac' src='./voldemort.jpg' alt='voldemort' /></NavLink>
+                                <NavLink to={{ pathname: '/game', state: { char: 'voldemort'} }}><img className='imgcharac' src='./voldemort.jpg' alt='voldemort' /></NavLink>
                             </nav>
                     </div>
                     <div className='characFeel'>
-                        <h3>  Generous ?</h3>
+                        <div className="charaname">Generous ?</div>
                             <nav>
-                                <NavLink to='./game'><img className='imgcharac' src='./reine.png' alt='reine' /></NavLink>
+                                <NavLink to={{ pathname: '/game', state: { char: 'witch'} }}>><img className='imgcharac' src='./reine.png' alt='reine' /></NavLink>
                             </nav>
                     </div>
                 </div>

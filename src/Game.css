@@ -85,6 +85,12 @@ body{
        margin: 70vh 0 0 -20vw;
     }
 }
+.char{
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    border: solid 2px black;
+}
 
 #timereteggs {
     display:flex;
@@ -93,5 +99,5 @@ body{
 
 #scoreC {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
 }
