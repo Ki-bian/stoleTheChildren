@@ -1,20 +1,16 @@
 import React from 'react';
-import Button from 'react-bootstrap/Button';
-import Modal from 'react-bootstrap/Modal';
-import './Modal.css';
-import { link } from 'fs';
-// import { Link } from 'react-router-dom';
+import { Button, Modal } from 'react-bootstrap';
+import './ModalScore.css';
+import { NavLink } from 'react-router-dom';
 
 
 class ModalScore extends React.Component {
   constructor(props, context) {
     super(props, context);
-
-    this.handleClose = this.handleClose.bind(this);
-
     this.state = {
       show: true,
     };
+    this.handleClose = this.handleClose.bind(this);
   }
 
   handleClose() {
@@ -31,24 +27,19 @@ class ModalScore extends React.Component {
           </Modal.Header>
           <Modal.Body id="modalBody">
             <div>
-            Congratulation, you stole these horribles kids !
+              Congratuls, you rob these horrible kids !
             </div>
             <div className='actualScore'>
-            Your score this round : 
+              Your score : {this.props.score}
             </div>
           </Modal.Body>
           <Modal.Footer id="modalFoot">
-            <Link exact to="/" onClick={() => reset()}>
-              <Button className="buttonModalScore" onClick={this.handleClose}>
-              Best scores
+          <NavLink to='./'>
+            <Button className="buttonModalScore" onClick={this.handleClose}>
+              Home
               </Button>
-            </Link>
-            <Link exact to="/" onClick={() => reset()}>
-              <Button className="buttonModalAgain" onClick={this.handleClose}>
-              Play again
-              </Button>
-            </Link>
-        </Modal.Footer>
+              </NavLink>
+          </Modal.Footer>
         </Modal>
       </div>
     );

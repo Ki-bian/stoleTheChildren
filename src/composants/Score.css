@@ -1,7 +1,7 @@
 #ScoreTo {
     border-style: solid;
     border-color: black;
-    width: 150px;
+    width: 350px;
     height: 60px;
     text-align: center;
     border-radius: 15px;
@@ -12,4 +12,8 @@
     color: red;
     font-size: 35px;
     font-weight: bold;
+}
+
+#yourScore {
+    color: grey;
 }
