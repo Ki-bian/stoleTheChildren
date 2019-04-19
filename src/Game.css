@@ -111,6 +111,9 @@ body{
     left: 4%;
     width: 8%;
 }
+.nemesis:hover{
+    opacity: 0.9;
+}
 .nemesis img{
     width : 100%;
 }
