@@ -45,13 +45,13 @@ class Timer extends Component {
                     width: 101,
                 })
             }
-        }, 100)
+        }, 300)
     }
 
     render() {
         return (
             <div className="barre">
-                <div className="jauge" style={{ ...this.style, background: this.state.background, width: `${this.state.width}%`, transitionProperty: 'width', transitionDuration: '100ms' }} />
+                <div className="jauge" style={{ ...this.style, background: this.state.background, width: `${this.state.width}%`, transitionProperty: 'width', transitionDuration: '600ms' }} />
                 <div>
                     {this.state.width===101?<ModalScore score={this.props.score}/>:''}
                 </div>
