@@ -12,6 +12,7 @@ class Board extends Component {
   constructor(props) {
     super(props)
     this.state = {
+      gain: 0,
       score: 0,
       pointer: 0,
       pointer2: 0,
@@ -84,6 +85,7 @@ class Board extends Component {
     if (id === "egg1") {
       this.setState({
         score: this.state.score + newScore,
+        gain : newScore,
         pointer: 1,
       });
       setTimeout(() => {
@@ -93,6 +95,7 @@ class Board extends Component {
     if (id === "egg2") {
       this.setState({
         score: this.state.score + newScore,
+        gain : newScore,
         pointer2: 1,
       });
       setTimeout(() => {
@@ -102,6 +105,7 @@ class Board extends Component {
     if (id === "egg3") {
       this.setState({
         score: this.state.score + newScore,
+        gain : newScore,
         pointer3: 1,
       });
       setTimeout(() => {
@@ -111,6 +115,7 @@ class Board extends Component {
     if (id === "egg4") {
         this.setState({
           score: this.state.score + newScore,
+          gain : newScore,
           pointer4: 1,
         });
         setTimeout(() => {
@@ -167,18 +172,22 @@ class Board extends Component {
         <div className="bebe">
           <img src={imgs[pointer]} onClick={this.handleClick} alt="bebe" />
           <Egg id="egg1" score={this.getScore} />
+          <p className="add1">+ {this.state.gain}</p>
         </div>
         <div className="bebe2">
           <img src={imgs2[pointer2]} onClick={this.handleClick2} alt="bebe2" />
           <Egg id="egg2" score={this.getScore} />
+          <p className="add1">+ {this.state.gain}</p>
         </div>
         <div className="bebe3">
           <img src={imgs3[pointer3]} onClick={this.handleClick3} alt="bebe3" />
           <Egg id="egg3" score={this.getScore} />
+          <p className="add1">+ {this.state.gain}</p>
         </div>
         <div className="bebe4">
           <img src={imgs4[pointer4]} onClick={this.handleClick4} alt="bebe3" />
           <Egg id="egg4" score={this.getScore} />
+          <p className="add1">+ {this.state.gain}</p>
         </div>
       </div>
     );

@@ -3,6 +3,12 @@
 	outline: 0;
 	margin: 0;
     padding: 0;
+    outline: 0;
+    -webkit-user-select: none; 
+    -khtml-user-select: none; 
+    -moz-user-select: none; 
+    -o-user-select: none; 
+    user-select: none;
 }
 
 
@@ -105,6 +111,33 @@ body{
 
 .bebe, .bebe2, .bebe3, .bebe4{
     cursor:url("https://www.dropbox.com/s/uon9apohjts3cki/curs.png?dl=1"), pointer;
+}
+
+/*.bebe, .bebe2, .bebe3, .bebe4{
+    cursor:url("https://image.noelshack.com/fichiers/2019/16/5/1555667946-oeuf.png"), pointer;
+}
+
+.bebe:active, .bebe2:active, .bebe3:active, .bebe4:active
+{
+    cursor:url("https://image.noelshack.com/fichiers/2019/16/5/1555668236-oeuf2.png"), pointer;
+}
+*/
+
+.add1
+{
+    position: absolute;
+    margin-top: -16vh;
+    margin-left: 8vh;
+    transition: margin 0.1s linear;
+    opacity: 0;
+    font-size: 4vh;
+    font-weight: bold;
+}
+
+.bebe:active > .add1, .bebe2:active > .add1, .bebe3:active > .add1, .bebe4:active > .add1
+{
+    opacity:1;
+    margin-top: -30vh;
 }
 
 .nemesis{
