@@ -1,0 +1,42 @@
+#sasa {
+    background-image: url('https://dk2wbmtb9x9n8.cloudfront.net/voeux/5/506/5061-Fond%20d%20oeufs%20de%20paques_medium.gif');
+}
+
+#victory {
+    display: flex;
+    justify-content: center !important;
+    font-weight: bold !important;
+    font-size: 1em !important;
+}
+
+.modal-content{
+    margin-top: 50%;
+}
+
+#modalAlerte {
+    -webkit-border-radius: 20px !important;
+    -moz-border-radius: 20px !important;
+    border-radius: 20px !important; 
+}
+
+#modalBody {
+    background-color:#E2E9ED;
+    font-size: 2em !important;
+    justify-content: center !important;
+    display: flex;
+    flex-direction: column;
+}
+
+.buttonModalAgain {
+    background-color: #E2E9ED !important;
+    color: #2B3332 !important;
+    font-weight: bold !important;
+}
+
+#modalFoot {
+    background-color: #2B3332;
+}
+
+#imgModal {
+    margin: 10px !important;
+}

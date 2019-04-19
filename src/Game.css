@@ -1,0 +1,85 @@
+*
+{
+	outline: 0;
+	margin: 0;
+    padding: 0;
+}
+
+
+body{
+	width: 98.9vw;
+	height: 40vw;
+	background: fixed, fixed, url("./assets/img/background.png") no-repeat scroll top center, black;
+	background-size: cover;
+	color: white;
+    font-family: 'Khand', sans-serif;
+    overflow: hidden;
+}
+
+.bebe{
+    animation: walk 7s linear infinite;
+    position: absolute;
+}
+
+@keyframes walk
+{
+    0%
+    {
+        margin: 40vh 0 0 199vh;
+    }
+    100%
+    {
+       margin: 40vh 0 0 -20vw;
+    }
+}
+
+.bebe2{
+    animation: walk2 8s linear infinite;  
+    position: absolute; 
+}
+
+@keyframes walk2
+{
+    0%
+    {
+        margin: 55vh 0 0 199vh;
+    }
+    100%
+    {
+        margin: 55vh 0 0 -20vw;
+    }
+}
+
+.bebe3{
+    animation: walk3 6s linear infinite;   
+    position: absolute; 
+}
+
+@keyframes walk3
+{
+    0%
+    {
+        margin: 60vh 0 0 199vh;
+    }
+    100%
+    {
+       margin: 60vh 0 0 -20vw;
+    }
+}
+
+.bebe4{
+    animation: walk4 10s ease infinite;   
+    position: absolute; 
+}
+
+@keyframes walk4
+{
+    0%
+    {
+        margin: 70vh 0 0 199vh;
+    }
+    100%
+    {
+       margin: 70vh 0 0 -20vw;
+    }
+}
