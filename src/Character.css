@@ -3,14 +3,12 @@
     display: flex;
     justify-content: space-around;
     margin-top: 10px;
-    margin-bottom: 40px;
 }
 
 .imgcharac{
     border-radius: 50%;
     width: 250px;
     height: 250px;
-    margin: 6%;
     border: solid 1px black;
     box-shadow: 0 1px 5px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }
@@ -31,6 +29,6 @@
     text-align: center;    
     background-color: rgb(1224, 236, 255, 0.4);
     border-radius: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 25px;
     
 }

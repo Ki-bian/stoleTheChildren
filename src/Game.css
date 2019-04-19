@@ -84,8 +84,10 @@ body{
     }
 }
 .char{
-    width: 85px;
-    height: 85px;
+    margin-left: -26vh;
+    margin-top: -6vh;
+    width: 140px;
+    height: 140px;
     border-radius: 50%;
     border: solid 3px black;
 }
