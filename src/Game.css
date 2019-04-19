@@ -83,3 +83,8 @@ body{
        margin: 70vh 0 0 -20vw;
     }
 }
+.char{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}

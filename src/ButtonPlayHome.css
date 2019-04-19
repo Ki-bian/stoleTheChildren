@@ -1,7 +1,9 @@
 #PlayButton {
-    width: 50%;
+    width: 30%;
     display: inline-block;
     text-align: center;
+    font-size: 30px;
+    border-radius: 12px;
 
 }
 .containerButton {

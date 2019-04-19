@@ -95,9 +95,23 @@ class Board extends Component {
 
   render() {
     const { pointer, pointer2, pointer3, imgs, imgs2, imgs3 } = this.state;
-
+    let image;
+    switch (this.props.char) {
+      case 'burns':
+          image = "./burns.png";
+          break;
+      case 'voldemort':
+          image = "./voldemort.jpg";
+          break;
+      case 'witch':
+          image = "./reine.png";
+          break;
+      default:
+          break;
+  }
     return (
         <div className="board">
+          <img src={image} className="char"/>
                 <Score newScore={this.state.score} />
                 <div className="bebe">
                     <img src={imgs[pointer]} onClick={this.handleClick} alt="bebe"/>
