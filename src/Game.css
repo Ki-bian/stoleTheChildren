@@ -104,3 +104,13 @@ body{
     cursor:url("https://www.dropbox.com/s/uon9apohjts3cki/curs.png?dl=1"), pointer;
 }
 
+.nemesis{
+    position: absolute;
+    top: 30%;
+    left: 4%;
+    width: 8%;
+}
+.nemesis img{
+    width : 100%;
+}
+

@@ -4,35 +4,35 @@ import './EggsValue.css';
 const eggTab = [
     {
         score: 1,
-        image: "./junk.png",
+        image: "./junk1.png",
     },
     {
         score: 2,
-        image: "./basic.png",
+        image: "./basic1.png",
     },
     {
         score: 3,
-        image: "./fine.png",
+        image: "./fine1.png",
     },
     {
         score: 4,
-        image: "./ascended.png",
+        image: "./ascended1.png",
     },
     {
         score: 5,
-        image: "./exotic.png",
+        image: "./exotic1.png",
     },
     {
         score: 6,
-        image: "./rare.png",
+        image: "./rare1.png",
     },
     {
         score: 7,
-        image: "./masterwork.png",
+        image: "./masterwork1.png",
     },
     {
         score: 8,
-        image: "./legendary.png",
+        image: "./legendary1.png",
     }
 ]
 
