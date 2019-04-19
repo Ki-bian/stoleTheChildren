@@ -4,7 +4,7 @@
     justify-content: space-around;
 }
 .eggs {
-    width: 11%;
+    width: 12%;
     height: auto;
     text-align: center;
     background-color: #ededed;
@@ -19,12 +19,14 @@
     width: 100%;
     padding-left: 10%;
     padding-right: 10%;
+    padding-bottom: 10%;
     
 }
-h3 {
-    height: 15%;
-    font: bold;
-    background-color: rgb(190, 217, 241);
-    border-radius: 5px; 
 
+#eggsContainer {
+    width: 40%;
+}
+
+#ptsnumb {
+    font-weight: bold;
 }

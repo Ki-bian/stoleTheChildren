@@ -4,8 +4,9 @@ import './Game.css';
 import bebe from './assets/img/bebe2.gif'
 import bebe2 from './assets/img/bebe touché.gif'
 import Egg from './Egg';
-import EggsValue from './EggsValue';
 import Score from './composants/Score';
+import Timer from './composants/Timer';
+import EggsValue from './EggsValue'
 
 class Board extends Component {
   constructor(props) {
@@ -39,6 +40,9 @@ class Board extends Component {
     const { pointer } = this.state;
     const newPointer = pointer === length - 1 ? 0 : pointer + 1;
     this.setState({ pointer: newPointer });
+    setTimeout(() => {
+      this.setState({ pointer: 0 });
+    }, 800);
   }
 
   handleClick2() {
@@ -46,6 +50,9 @@ class Board extends Component {
     const { pointer2 } = this.state;
     const newPointer = pointer2 === length - 1 ? 0 : pointer2 + 1;
     this.setState({ pointer2: newPointer });
+    setTimeout(() => {
+      this.setState({ pointer2: 0 });
+    }, 800);
   }
 
   handleClick3() {
@@ -53,6 +60,9 @@ class Board extends Component {
     const { pointer3 } = this.state;
     const newPointer = pointer3 === length - 1 ? 0 : pointer3 + 1;
     this.setState({ pointer3: newPointer });
+    setTimeout(() => {
+      this.setState({ pointer3: 0 });
+    }, 800);
   }
   getScore = (newScore, id) => {
     if (id === "egg1") {
@@ -60,18 +70,27 @@ class Board extends Component {
         score: this.state.score + newScore,
         pointer: 1,
       });
+      setTimeout(() => {
+        this.setState({ pointer: 0 });
+      }, 800);
     }
     if (id === "egg2") {
       this.setState({
         score: this.state.score + newScore,
         pointer2: 1,
       });
+      setTimeout(() => {
+        this.setState({ pointer2: 0 });
+      }, 800);
     }
     if (id === "egg3") {
       this.setState({
         score: this.state.score + newScore,
         pointer3: 1,
       });
+      setTimeout(() => {
+        this.setState({ pointer3: 0 });
+      }, 800);
     }
   }
 
@@ -80,22 +99,29 @@ class Board extends Component {
 
     return (
       <div className="board">
-        <Score newScore={this.state.score} />
-        <div className="board">
-                <Score newScore={this.state.score} />
-                <div className="bebe">
-                    <img src={imgs[pointer]} onClick={this.handleClick} alt="bebe"/>
-                    <Egg id="egg1" score={this.getScore} />
-                </div>
-                <div className="bebe2">
-                    <img src={imgs2[pointer2]} onClick={this.handleClick2} alt="bebe2"/>
-                    <Egg id="egg2" score={this.getScore} />
-                </div>
-                <div className="bebe3">
-                    <img src={imgs3[pointer3]} onClick={this.handleClick3} alt="bebe3"/>
-                    <Egg id="egg3" score={this.getScore} />
-                </div>
+        <div id='timereteggs'>
+          <div id='timerContainer'>
+            <Timer score={this.state.score} />
+            <div id='scoreC'>
+            <Score newScore={this.state.score} />
             </div>
+          </div>
+          <div id='eggsContainer'>
+            <EggsValue />
+          </div>
+        </div>
+        <div className="bebe">
+          <img src={imgs[pointer]} onClick={this.handleClick} alt="bebe" />
+          <Egg id="egg1" score={this.getScore} />
+        </div>
+        <div className="bebe2">
+          <img src={imgs2[pointer2]} onClick={this.handleClick2} alt="bebe2" />
+          <Egg id="egg2" score={this.getScore} />
+        </div>
+        <div className="bebe3">
+          <img src={imgs3[pointer3]} onClick={this.handleClick3} alt="bebe3" />
+          <Egg id="egg3" score={this.getScore} />
+        </div>
       </div>
     );
   }
