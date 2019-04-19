@@ -76,11 +76,11 @@ body{
 {
     0%
     {
-        margin: 60vh 0 0 199vh;
+        margin: 58vh 0 0 199vh;
     }
     100%
     {
-       margin: 60vh 0 0 -20vw;
+       margin: 58vh 0 0 -20vw;
     }
 }
 .char{
