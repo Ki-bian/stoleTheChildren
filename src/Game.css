@@ -19,6 +19,8 @@ body{
 .bebe{
     animation: walk 7s linear infinite;
     position: absolute;
+    width: 10vh;
+    height: 10vh;
 }
 
 @keyframes walk
