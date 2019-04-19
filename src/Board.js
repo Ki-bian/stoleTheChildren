@@ -16,6 +16,7 @@ class Board extends Component {
       pointer: 0,
       pointer2: 0,
       pointer3: 0,
+      pointer4: 0,
       imgs: [
         bebe,
         bebe2,
@@ -27,12 +28,17 @@ class Board extends Component {
       imgs3: [
         bebe,
         bebe2,
+      ],
+      imgs4: [
+        bebe,
+        bebe2,
       ]
     };
 
     this.handleClick = this.handleClick.bind(this);
     this.handleClick2 = this.handleClick2.bind(this);
     this.handleClick3 = this.handleClick3.bind(this);
+    this.handleClick4 = this.handleClick4.bind(this);
   }
 
   handleClick() {
@@ -64,6 +70,16 @@ class Board extends Component {
       this.setState({ pointer3: 0 });
     }, 800);
   }
+
+  handleClick4() {
+    const { length } = this.state.imgs4;
+    const { pointer4 } = this.state;
+    const newPointer = pointer4 === length - 1 ? 0 : pointer4 + 1;
+    this.setState({ pointer4: newPointer });
+    setTimeout(() => {
+      this.setState({ pointer4: 0 });
+    }, 800);
+  }
   getScore = (newScore, id) => {
     if (id === "egg1") {
       this.setState({
@@ -92,10 +108,19 @@ class Board extends Component {
         this.setState({ pointer3: 0 });
       }, 800);
     }
+    if (id === "egg4") {
+        this.setState({
+          score: this.state.score + newScore,
+          pointer4: 1,
+        });
+        setTimeout(() => {
+          this.setState({ pointer4: 0 });
+        }, 800);
+      }
   }
 
   render() {
-    const { pointer, pointer2, pointer3, imgs, imgs2, imgs3 } = this.state;
+    const { pointer, pointer2, pointer3, pointer4, imgs, imgs2, imgs3, imgs4 } = this.state;
     let image;
     switch (this.props.char) {
       case 'burns':
@@ -117,7 +142,7 @@ class Board extends Component {
           <div id='timerContainer'>
             <Timer score={this.state.score} />
             <div id='scoreC'>
-            <img src={image} className="char"/>
+            <img src={image} className="char" alt="char"/>
             <Score newScore={this.state.score} />
             </div>
           </div>
@@ -136,6 +161,10 @@ class Board extends Component {
         <div className="bebe3">
           <img src={imgs3[pointer3]} onClick={this.handleClick3} alt="bebe3" />
           <Egg id="egg3" score={this.getScore} />
+        </div>
+        <div className="bebe4">
+          <img src={imgs4[pointer4]} onClick={this.handleClick4} alt="bebe3" />
+          <Egg id="egg4" score={this.getScore} />
         </div>
       </div>
     );
