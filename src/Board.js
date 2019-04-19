@@ -93,19 +93,32 @@ class Board extends Component {
       }, 800);
     }
   }
+  extraScore = (extrascore) =>{
+    this.setState({
+      score: this.state.score + extrascore,
+    });
+  }
 
   render() {
     const { pointer, pointer2, pointer3, imgs, imgs2, imgs3 } = this.state;
     let image;
+    let nemesis;
+    let extrascore;
     switch (this.props.char) {
       case 'burns':
           image = "./burns.png";
+          nemesis = "./smither.png";
+          extrascore = 101;
           break;
       case 'voldemort':
           image = "./voldemort.jpg";
+          nemesis = "./harry.png";
+          extrascore = 65;
           break;
       case 'witch':
           image = "./reine.png";
+          nemesis = "./neige.png";
+          extrascore = 14;
           break;
       default:
           break;
@@ -117,7 +130,7 @@ class Board extends Component {
           <div id='timerContainer'>
             <Timer score={this.state.score} />
             <div id='scoreC'>
-            <img src={image} className="char"/>
+            <img src={image} className="char" alt="char"/>
             <Score newScore={this.state.score} />
             </div>
           </div>
@@ -125,6 +138,7 @@ class Board extends Component {
             <EggsValue />
           </div>
         </div>
+        {this.state.score > 30 ? <div className="nemesis" onClick={() => this.extraScore(extrascore)}><img src={nemesis} className="nemesis" alt="nemesis"/></div> : undefined}
         <div className="bebe">
           <img src={imgs[pointer]} onClick={this.handleClick} alt="bebe" />
           <Egg id="egg1" score={this.getScore} />

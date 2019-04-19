@@ -99,3 +99,12 @@ body{
     display: flex;
     justify-content: space-around;
 }
+.nemesis{
+    position: absolute;
+    top: 30%;
+    left: 4%;
+    width: 8%;
+}
+.nemesis img{
+    width : 100%;
+}
