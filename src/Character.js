@@ -30,7 +30,7 @@ class Character extends Component {
                     <div className='characFeel'>
                         <div className="charaname">Generous ?</div>
                             <nav>
-                                <NavLink to={{ pathname: '/game', state: { char: 'witch'} }}>><img className='imgcharac' src='./reine.png' alt='reine' /></NavLink>
+                                <NavLink to={{ pathname: '/game', state: { char: 'witch'} }}><img className='imgcharac' src='./reine.png' alt='reine' /></NavLink>
                             </nav>
                     </div>
                 </div>
