@@ -25,11 +25,11 @@ body{
 {
     0%
     {
-        margin: 40vh 0 0 199vh;
+        margin: 30vh 0 0 199vh;
     }
     100%
     {
-       margin: 40vh 0 0 -20vw;
+       margin: 30vh 0 0 -20vw;
     }
 }
 
@@ -42,11 +42,11 @@ body{
 {
     0%
     {
-        margin: 55vh 0 0 199vh;
+        margin: 40vh 0 0 199vh;
     }
     100%
     {
-        margin: 55vh 0 0 -20vw;
+        margin: 40vh 0 0 -20vw;
     }
 }
 
@@ -59,11 +59,11 @@ body{
 {
     0%
     {
-        margin: 60vh 0 0 199vh;
+        margin: 50vh 0 0 199vh;
     }
     100%
     {
-       margin: 60vh 0 0 -20vw;
+       margin: 50vh 0 0 -20vw;
     }
 }
 
@@ -82,4 +82,14 @@ body{
     {
        margin: 70vh 0 0 -20vw;
     }
+}
+
+#timereteggs {
+    display:flex;
+    justify-content: space-around;
+}
+
+#scoreC {
+    display: flex;
+    justify-content: center;
 }

@@ -6,6 +6,7 @@ import bebe2 from './assets/img/bebe touché.gif'
 import Egg from './Egg';
 import Score from './composants/Score';
 import Timer from './composants/Timer';
+import EggsValue from './EggsValue'
 
 class Board extends Component {
   constructor(props) {
@@ -98,8 +99,17 @@ class Board extends Component {
 
     return (
       <div className="board">
-        <Timer score={this.state.score} />
-        <Score newScore={this.state.score} />
+        <div id='timereteggs'>
+          <div id='timerContainer'>
+            <Timer score={this.state.score} />
+            <div id='scoreC'>
+            <Score newScore={this.state.score} />
+            </div>
+          </div>
+          <div id='eggsContainer'>
+            <EggsValue />
+          </div>
+        </div>
         <div className="bebe">
           <img src={imgs[pointer]} onClick={this.handleClick} alt="bebe" />
           <Egg id="egg1" score={this.getScore} />
