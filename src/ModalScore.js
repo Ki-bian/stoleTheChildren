@@ -27,10 +27,10 @@ class ModalScore extends React.Component {
           </Modal.Header>
           <Modal.Body id="modalBody">
             <div>
-              Congratulation, you stole these horribles kids !
+              Congratuls, you rob these horrible kids !
             </div>
             <div className='actualScore'>
-              Your score this round : {this.props.score}
+              Your score : {this.props.score}
             </div>
           </Modal.Body>
           <Modal.Footer id="modalFoot">
@@ -39,9 +39,6 @@ class ModalScore extends React.Component {
               Home
               </Button>
               </NavLink>
-            <Button className="buttonModalAgain" onClick={this.handleClose}>
-              Play again
-            </Button>
           </Modal.Footer>
         </Modal>
       </div>

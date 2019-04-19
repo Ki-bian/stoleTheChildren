@@ -11,7 +11,7 @@ class Score extends Component {
         return (
             <div>
                 <div id='ScoreTo'>
-                    <div id='chiffre'><span id='yourScore'>Your score:</span>{this.props.newScore}</div>
+                    <div id='chiffre'><span id='yourScore'>Your score: </span>{this.props.newScore}</div>
                 </div>
             </div>
         );

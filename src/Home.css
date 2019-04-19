@@ -1,16 +1,35 @@
+@import url('https://fonts.googleapis.com/css?family=Lato|Roboto');
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+@import url('https://fonts.googleapis.com/css?family=Anton');
+
+
 h1 {
     text-align: center;
     padding-top: 2%;
-    padding-bottom: 2%;
+    padding-bottom: 1%;
+    font-family: 'Anton', sans-serif;
+    font-size: 2.3em;
+    font-weight: bold;
 }
-
+h2 {
+    text-align: center;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    font-family: 'Anton', sans-serif;
+    font-size: 1.8em;
+    font-weight: bold;
+}
 #borderTitle {
     border-style: solid;
     border-color: black;
-    width: 400px;
+    width: 10%;
     border-radius: 15px;
     background-color: greenyellow;
     margin-top: 2%;
+}
+#borderTitle img {
+   width: 100%;
+   border-radius: 15px;
 }
 
 #TitleHome {
