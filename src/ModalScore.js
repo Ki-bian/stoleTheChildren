@@ -27,7 +27,7 @@ class ModalScore extends React.Component {
           </Modal.Header>
           <Modal.Body id="modalBody">
             <div>
-              Congratuls, you rob these horrible kids !
+              Congrats, you rob these horrible kids !
             </div>
             <div className='actualScore'>
               Your score : {this.props.score}

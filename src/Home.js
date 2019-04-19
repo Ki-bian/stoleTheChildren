@@ -13,7 +13,8 @@ class Home extends Component {
             <div>
                 <div id='TitleHome'>
                     <div id='borderTitle'>
-                        <img src="./logo.png"/>
+                        <span><img className="langue" src="./langue.png" alt="langue"/></span>
+                        <img className="logo" src="./logo.png" alt="logo"/>
                     </div>
                 </div>
                 <Character/>

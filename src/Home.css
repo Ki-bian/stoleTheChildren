@@ -26,6 +26,7 @@ h2 {
     border-radius: 15px;
     background-color: greenyellow;
     margin-top: 2%;
+    position: relative;
 }
 #borderTitle img {
     width: 100%;
@@ -35,4 +36,18 @@ h2 {
 #TitleHome {
     display:flex;
     justify-content: center;
+}
+#borderTitle span {
+    display:flex;
+    width: 28%;
+    justify-content: center;
+    position: absolute;
+    top: 44%;
+    left: 35%;
+    display:none; 
+    z-index:99;
+}
+
+#borderTitle:hover span {
+    display: block;
 }
