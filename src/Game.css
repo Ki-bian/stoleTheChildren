@@ -19,8 +19,6 @@ body{
 .bebe{
     animation: walk 7s linear infinite;
     position: absolute;
-    width: 10vh;
-    height: 10vh;
 }
 
 @keyframes walk
@@ -78,11 +76,11 @@ body{
 {
     0%
     {
-        margin: 70vh 0 0 199vh;
+        margin: 60vh 0 0 199vh;
     }
     100%
     {
-       margin: 70vh 0 0 -20vw;
+       margin: 60vh 0 0 -20vw;
     }
 }
 .char{
@@ -101,3 +99,18 @@ body{
     display: flex;
     justify-content: space-around;
 }
+
+.bebe, .bebe2, .bebe3, .bebe4{
+    cursor:url("https://www.dropbox.com/s/uon9apohjts3cki/curs.png?dl=1"), pointer;
+}
+
+.nemesis{
+    position: absolute;
+    top: 30%;
+    left: 4%;
+    width: 8%;
+}
+.nemesis img{
+    width : 100%;
+}
+
