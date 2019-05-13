@@ -17,7 +17,7 @@ body{
 	height: 40vw;
 	background: fixed, fixed, url("./assets/img/background.png") no-repeat scroll top center, black;
 	background-size: cover;
-	color: white;
+	color: black;
     font-family: 'Khand', sans-serif;
     overflow: hidden;
 }
